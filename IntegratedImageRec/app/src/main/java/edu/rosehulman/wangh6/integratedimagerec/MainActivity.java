@@ -7,18 +7,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ViewFlipper;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends GolfBallDeliveryActivity {
 
-    private ViewFlipper mViewFlipper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mViewFlipper = findViewById(R.id.my_view_flipper);
+
 
     }
 

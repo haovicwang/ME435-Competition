@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IntegratedImageRec</string>
+    <string name="app_name">Golf Ball Delivery</string>
 
     <string-array name="ball_colors">
         <item >None</item>
