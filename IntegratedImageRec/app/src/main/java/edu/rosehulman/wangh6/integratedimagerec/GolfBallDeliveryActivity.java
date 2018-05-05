@@ -22,7 +22,7 @@ import android.widget.ViewFlipper;
 import edu.rosehulman.me435.NavUtils;
 import edu.rosehulman.me435.RobotActivity;
 
-public class GolfBallDeliveryActivity extends RobotActivity {
+public class GolfBallDeliveryActivity extends ImageRecActivity {
 
 	/** Constant used with logging that you'll see later. */
 	public static final String TAG = "GolfBallDelivery";
@@ -85,7 +85,6 @@ public class GolfBallDeliveryActivity extends RobotActivity {
 
     private  TextView mJumboXTextView, mJumboYTextView;
 
-    protected ViewFlipper mViewFlipper;
     protected LinearLayout mJumboLinearLayout;
 
     // ---------------------- End of UI References ----------------------
@@ -154,7 +153,7 @@ public class GolfBallDeliveryActivity extends RobotActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_main);
 //        setContentView(R.layout.main_screen);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         mBallImageButtons = new ImageButton[]{(ImageButton) findViewById(R.id.location_1_image_button),
@@ -175,7 +174,6 @@ public class GolfBallDeliveryActivity extends RobotActivity {
 
         mJumboXTextView = (TextView) findViewById(R.id.jumbo_x);
         mJumboYTextView = (TextView) findViewById(R.id.jumbo_y);
-        mViewFlipper = findViewById(R.id.my_view_flipper);
 
         // When you start using the real hardware you don't need test buttons.
         boolean hideFakeGpsButtons = false;
