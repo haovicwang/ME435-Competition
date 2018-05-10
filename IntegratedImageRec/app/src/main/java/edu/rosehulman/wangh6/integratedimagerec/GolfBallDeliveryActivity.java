@@ -87,6 +87,8 @@ public class GolfBallDeliveryActivity extends ImageRecActivity {
 
     protected LinearLayout mJumboLinearLayout;
 
+    public long mFirebaseUpdateCounter = 0;
+
     // ---------------------- End of UI References ----------------------
 
 	
@@ -189,6 +191,8 @@ public class GolfBallDeliveryActivity extends ImageRecActivity {
 
         setState(State.READY_FOR_MISSION);
         mScripts = new Scripts(this);
+        mViewFlipper.setDisplayedChild(1);
+
     }
 
     public void setState(State newState) {
@@ -230,6 +234,7 @@ public class GolfBallDeliveryActivity extends ImageRecActivity {
                 break;
         }
         mState = newState;
+        mFirebaseRef.child("state").setValue(newState);
     }
 
 
@@ -279,7 +284,30 @@ public class GolfBallDeliveryActivity extends ImageRecActivity {
                 setState(State.READY_FOR_MISSION);
             }
         }
-        mMatchTimeTextView.setText(getString(R.string.time_format, timeRemainingSeconds / 60, timeRemainingSeconds % 60));
+
+        String matchTimeString = getString(R.string.time_format,timeRemainingSeconds/60,timeRemainingSeconds%60);
+        mMatchTimeTextView.setText(matchTimeString);
+
+        mFirebaseUpdateCounter++;
+        if(mFirebaseUpdateCounter % 20 == 0 && mState != State.READY_FOR_MISSION){
+            mFirebaseRef.child("time").child("matchTime").setValue(matchTimeString);
+            mFirebaseRef.child("time").child("stateTimeS").setValue(getStateTimeMs()/1000);
+        }
+
+
+
+        if(mConeFound){
+            if(mConeLeftRightLocation < 0){
+                Log.d(TAG, "Turn left some amount.");
+
+            }
+            if (mConeSize > 0.1){
+                Log.d(TAG, "Might want to stop. The cone is pretty huge.");
+                mJumboLinearLayout.setBackgroundColor(Color.parseColor("#ff8000"));
+            }else{
+                mJumboLinearLayout.setBackgroundColor(Color.GRAY);
+            }
+        }
 
         switch (mState) {
             case DRIVE_TOWARDS_FAR_BALL:
@@ -366,7 +394,19 @@ public class GolfBallDeliveryActivity extends ImageRecActivity {
             mJumboLinearLayout.setBackgroundColor(Color.GRAY);
         }
 
+        sendGpsInfo(x,y,heading);
 
+
+    }
+
+    private void sendGpsInfo(double x, double y, double heading){
+        mFirebaseRef.child("gps").child("x").setValue(x);
+        mFirebaseRef.child("gps").child("y").setValue(y);
+        if(heading > -180.0 && heading <= 180.0){
+            mFirebaseRef.child("gps").child("heading").setValue(heading);
+        }else{
+            mFirebaseRef.child("gps").child("heading").setValue("No heading");
+        }
     }
 
     @Override

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "979489331451",
+    "firebase_url": "https://me435-vic.firebaseio.com",
+    "project_id": "me435-vic",
+    "storage_bucket": "me435-vic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979489331451:android:2a6b03a37ebeb33b",
+        "android_client_info": {
+          "package_name": "edu.rosehulman.wangh6.integratedimagerec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979489331451-4vp67rul7i0cj7lbfd1ffqrnr4da752r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.rosehulman.wangh6.integratedimagerec",
+            "certificate_hash": "494fbfc3f8d69fe647082fb7f16d9f423f2ffbe5"
+          }
+        },
+        {
+          "client_id": "979489331451-uofn7q2hq1ajuivr2p21onluurt615ap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ6sHIvxfI8MqrHWrm7tgSPQMEyGCPOiA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979489331451-uofn7q2hq1ajuivr2p21onluurt615ap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
