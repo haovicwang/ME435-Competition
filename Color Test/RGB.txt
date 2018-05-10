@@ -1,0 +1,82 @@
+RGB
+---------------------------------
+Readings for location 1
+  LED off reading   = 993
+  LED red reading   = 544
+  LED green reading = 719
+  LED blue reading  = 853
+  LED white reading = 434
+  Location 1 ball   = Red ball
+
+Readings for location 2
+  LED off reading   = 975
+  LED red reading   = 925
+  LED green reading = 620
+  LED blue reading  = 875
+  LED white reading = 582
+  Location 2 ball   = Green ball
+
+Readings for location 3
+  LED off reading   = 1010
+  LED red reading   = 937
+  LED green reading = 886
+  LED blue reading  = 666
+  LED white reading = 596
+  Location 3 ball   = Blue ball
+---------------------------------
+
+External photo cell reading = 42
+---------------------------------
+Readings for location 1
+  LED off reading   = 984
+  LED red reading   = 538
+  LED green reading = 715
+  LED blue reading  = 847
+  LED white reading = 432
+  Location 1 ball   = Red ball
+
+Readings for location 2
+  LED off reading   = 976
+  LED red reading   = 927
+  LED green reading = 621
+  LED blue reading  = 876
+  LED white reading = 583
+  Location 2 ball   = Green ball
+
+Readings for location 3
+  LED off reading   = 1010
+  LED red reading   = 937
+  LED green reading = 886
+  LED blue reading  = 664
+  LED white reading = 595
+  Location 3 ball   = Blue ball
+---------------------------------
+
+External photo cell reading = 44
+---------------------------------
+Readings for location 1
+  LED off reading   = 1000
+  LED red reading   = 551
+  LED green reading = 724
+  LED blue reading  = 859
+  LED white reading = 435
+  Location 1 ball   = Red ball
+
+Readings for location 2
+  LED off reading   = 976
+  LED red reading   = 926
+  LED green reading = 620
+  LED blue reading  = 875
+  LED white reading = 582
+  Location 2 ball   = Green ball
+
+Readings for location 3
+  LED off reading   = 1010
+  LED red reading   = 937
+  LED green reading = 884
+  LED blue reading  = 662
+  LED white reading = 593
+  Location 3 ball   = Blue ball
+---------------------------------
+
+External photo cell reading = 44
